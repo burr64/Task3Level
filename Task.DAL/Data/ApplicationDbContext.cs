@@ -5,11 +5,13 @@ namespace Task.DAL.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, DbSet<Users> users, DbSet<Orders> orders)
         : base(options)
     {
+        Users = users;
+        Orders = orders;
     }
 
-    public DbSet<Users?> Users { get; set; }
+    public DbSet<Users> Users { get; set; }
     public DbSet<Orders> Orders { get; set; }
 }

@@ -1,9 +1,8 @@
 ﻿using Task.DAL.Data;
 using Task.DAL.Entities;
+using Task.DAL.Interfaces;
 
-// Добавляем using для Task.DAL
-
-namespace Task.DAL.Interfaces
+namespace Task.DAL.Repositories
 {
     public class UserRepository : IRepository<Users>
     {
